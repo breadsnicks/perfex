@@ -1,0 +1,40 @@
+<!DOCTYPE html> <!-- HTML5 document type declaration -->
+<html>
+<head>
+    <title>Reading Aloud Test</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles3.css"> <!-- Link to external CSS file for styling -->
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Reading Aloud Test</h1> <!-- Main header displayed as the title of the test -->
+        <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Favicon for the website -->
+    </header>
+    
+    <main class="main-content">
+        <section class="reading-section">
+            <h2>Now say the following:</h2> <!-- Section title indicating the task -->
+            <p id="originalText"> <!-- Paragraph containing the text that needs to be read aloud -->
+                Pumper 16, Aerial 15, Rescue 6 and District Chief 5. Dial to conventional channel 7.
+                The quick brown fox jumped over the lazy dog’s back. The raging ram runs round Ricky to hit Mickey.
+                All units. A theft of vehicle just occurred from 11045 Sheppard Avenue East.
+                All units, be on the lookout for a vulnerable person missing from York Region. Jonathan Spencer, male, white, 22 years, 6 feet, 200 pounds, blonde hair, wearing a red striped t-shirt, blue jeans and black running shoes.
+                He was last seen in the Steeles and Markham area at 2100 today.
+            </p>
+        </section>
+        <div class="button-container"> <!-- Container for recording control buttons -->
+            <button id="start" class="module-button">Start Recording</button> <!-- Button to start recording the reading -->
+            <button id="stop" class="module-button" disabled>Stop Recording</button> <!-- Button to stop recording, initially disabled -->
+        </div>
+        <div class="transcript-container"> <!-- Container to display the transcript of the recorded audio -->
+            <p id="transcript" class="transcript"></p>
+        </div>
+        
+        <!-- Return Button -->
+        <div class="submit-container">
+            <button id="submitBtn" class="module-button">Submit</button> <!-- Button to submit the completed task -->
+        </div>
+    </main>
+
+    <script src="speechToText.js"></script> <!-- External JavaScript file linked for handling speech-to-text functionality -->
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #004a99;
+  color: white;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #002856;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+#timerDisplay {
+  font-size: 36px;
+  background-color: #333;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-button {
+  background-color: rgb(235, 171, 52);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px; /* Increased padding-top */
+}
+
+.module-container {
+  background: #002856;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* Added margin to separate from the header */
+  width: 100%;
+  max-width: 600px;
+}
+
+.module-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 20px 0;
+}
+
+.module-button {
+  background-color: rgb(235, 171, 52);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  margin: 10px 0;
+  font-size: 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.module-button:hover {
+  background-color: #fcd703;
+}
+
+.module-button.completed {
+  background-color: #4CAF50; /* Green for completed modules */
+}
+.module-button.locked {
+  background-color: #4CAF50; /* Green for locked modules, assuming green is the correct color as per earlier discussion */
+  color: white; /* Ensures text is visible against the green background */
+  cursor: not-allowed;
+}
+
+
+.grade-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  margin: 10px 0;
+  font-size: 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 2px 4px 8px darkred;
+}
+
+.Grade-test-container {
+  margin-top: 20px;
+}
+
+.Grade-test {
+  background-color: red;
+  color: white;
+}
+
+.Grade-test:hover {
+  background-color: darkred;
+}
+
+footer#footer {
+  background: #002856;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+.module-button.locked {
+  background-color: black; /* Locked modules appear black */
+  color: #666; /* Lighter text color for contrast */
+  cursor: not-allowed;
+}

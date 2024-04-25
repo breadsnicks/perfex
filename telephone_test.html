@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>PERFEX PART 4</title> <!-- Website title for module -->
+    <link rel="stylesheet" href="styles7.css"> <!--Connect this html file to styles7.css and load poppy font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="TPD_seal.png">
+</head>
+<body class="main-body">
+    <header class="main-header">
+        <p class="header-title"><strong>Telephone Call Test</strong></p>
+    </header>
+    <!-- div specifically for buttons and answer form -->
+    <div class="container">
+        <div class="audio-control">
+            <!--ids are used to make buttons accesible for telephone-marking.js-->
+            <button id="audio-button" class="audio-button">Play Phone Call</button> <!--Phone call button-->
+            <button id="pickup-button" class="audio-button" hidden>Answer Phone</button> <!--Pickup buttton-->
+            <!--Audio button will be replaced by pickup button, hence why hey are placed in the same div-->
+        </div>
+        <div class="notes-section">
+            <textarea id="Notes" class="notes-textarea" placeholder="You may write notes in this text box"></textarea>
+        </div>
+        <!--Form used to hold all labels and answer boxes-->
+        <form id="telephoneForm" class="form">
+            <div class="input-group">
+                <label for="callerName">Caller's Name:</label>
+                <input type="text" id="callerName">
+                <button type="button" id="namebutton" class="enter-button">Enter</button>
+            </div>
+            <div class="input-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address">
+                <button type="button" id="addressbutton" class="enter-button">Enter</button>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber">
+                <button type="button" id="numberbutton" class="enter-button">Enter</button>
+            </div>
+            <div class="input-group">
+                <label for="equipment">Required Equipment:</label>
+                <input type="text" id="equipment">
+                <button type="button" id="equipmentbutton" class="enter-button">Enter</button>
+            </div>
+            <div class="input-group">
+                <label for="reason">Reason Behind Call:</label>
+                <input type="text" id="reason">
+                <button type="button" id="reasonbutton" class="enter-button">Enter</button>
+            </div>
+            <button type="button" id="submitForm" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <script src="telephone-marking.js"></script>
+</body>
+</html>

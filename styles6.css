@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #004a99;
+    color: #fff;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.header {
+    background-color: #002856;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-content {
+    background-color: #0056b3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: auto;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.question input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: black;
+    display: block;
+}
+
+.enter-button, .submit-button {
+    background-color: rgb(235, 171, 52);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.enter-button:hover, .submit-button:hover {
+    background-color: #e6af05;
+    transform: translateY(-2px);
+}
+
+#notes-container {
+    background-color: #0070dd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#notes {
+    white-space: pre-wrap;
+}
+
+/* Added styles for submit buttons container */
+.submit-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.submit-buttons-container > button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Last button should not have a margin bottom */
+.submit-buttons-container > button:last-child {
+    margin-bottom: 0;
+}
+
+/* Added result box styles */
+.result-box {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}

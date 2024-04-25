@@ -1,0 +1,55 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #004a99;
+    color: #fff;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.header {
+    background-color: #002856;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-content {
+    background-color: #0056b3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: auto;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+}
+
+.module-button {
+    background-color: #ebab34; /* Same style as .enter-button, .submit-button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block; /* Make the button block to fill container width */
+    margin: 10px auto; /* Center button */
+    text-align: center;
+}
+
+.module-button:hover {
+    background-color: #e6af05;
+    transform: translateY(-2px);
+}
+
+/* ... Other styles ... */

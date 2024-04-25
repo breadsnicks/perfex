@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html lang="en"> <!-- Document specifies English language -->
+<head>
+    <meta charset="UTF-8"> <!-- Character set specified as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Short Story Test B</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles6.css"> <!-- Link to external stylesheet for page styling -->
+    <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Link to favicon for the webpage -->
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Short Story Test B</h1> <!-- Main title of the test displayed in the header -->
+    </header>
+
+    <main class="main-content">
+        <div id="notes-container">
+            <p>Notes from Test A:</p> <!-- Display notes from the previous test part A -->
+            <div id="notes"></div> <!-- Container for displaying notes dynamically -->
+        </div>
+
+        <form id="questionForm"> <!-- Form for submitting answers to test questions -->
+            <!-- Input fields for answering specific questions based on the short story -->
+            <div class="question">
+                <label for="chiefOfPolice">1. Who was the Chief of Police?</label> <!-- Question asking for the Chief of Police -->
+                <input type="text" id="chiefOfPolice" name="chiefOfPolice"> <!-- Input field for answering the question -->
+                <button type="button" class="enter-button">Enter</button> <!-- Button to submit the answer -->
+            </div>
+            <div class="question">
+                <label for="policeCaptain">2. Who was the Police Captain?</label>
+                <input type="text" id="policeCaptain" name="policeCaptain">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="discussionTopic">3. What were the Chief and Captain talking about?</label>
+                <input type="text" id="discussionTopic" name="discussionTopic">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="officeDoors">4. How many doors did the office have?</label>
+                <input type="text" id="officeDoors" name="officeDoors">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="callFor">5. Who was the telephone call for?</label>
+                <input type="text" id="callFor" name="callFor">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="captainLeave">6. Why did the Captain leave the room?</label>
+                <input type="text" id="captainLeave" name="captainLeave">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="secretaryName">7. What was the Secretary’s name?</label>
+                <input type="text" id="secretaryName" name="secretaryName">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="lunchTime">8. What time did the Secretary leave for lunch?</label>
+                <input type="text" id="lunchTime" name="lunchTime">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="chiefBeforeLunch">9. What did the Chief do just before leaving for his lunch meeting?</label>
+                <input type="text" id="chiefBeforeLunch" name="chiefBeforeLunch">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="luncheonMeetingWith">10. Who was the Chief’s lunch meeting with?</label>
+                <input type="text" id="luncheonMeetingWith" name="luncheonMeetingWith">
+                <button type="button" class="enter-button">Enter</button>
+            </div>
+        </form>
+
+        <!-- Submit Buttons Container -->
+        <div class="submit-container">
+            <button id="submitBtn" class="enter-button">Submit</button> <!-- Button to finalize and submit all responses -->
+        </div>
+    </main>
+
+    <script src="test_b.js"></script> <!-- External JavaScript to handle interactive elements of the test -->
+</body>
+</html>

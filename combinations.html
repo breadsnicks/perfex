@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- Declaration to define this document as HTML5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character set declaration for supporting international characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Copying Information Test</title> <!-- Title of the web page -->
+    <link rel="stylesheet" href="styles4.css"> <!-- Link to external CSS file for styling -->
+    <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Favicon for the browser tab -->
+</head>
+<body>
+    <header class="header">
+        <span class="header-title">Copying Information Test</span> <!-- Header title displayed on the page -->
+    </header>
+
+    <main class="main-content">
+        <!-- Section for audio and input related to letter-word combinations -->
+        <audio id="combinationsAudio" src="LetterNumberCombinationsAPSC103.mp3"></audio> <!-- Audio control for playing letter-word combinations -->
+        <button id="combinationsButton" class="audio-button">Play Letter-Word Combinations</button> <!-- Button to play the audio -->
+        <div class="input-group">
+            <input type="text" id="combinationsInput" class="answer-input" placeholder="Enter letter-word combination" autocomplete="off">
+        </div>
+
+        <!-- Section for phrases and sentences audio and input -->
+        <audio id="phrasesAudio" src="PhrasesAndSentences.mp3"></audio> <!-- Audio control for playing phrases and sentences -->
+        <button id="phrasesButton" class="audio-button" disabled>Play Phrases and Sentences</button> <!-- Button to play the audio, initially disabled -->
+        <div class="input-group">
+            <input type="text" id="phrasesInput" class="answer-input" placeholder="Enter phrases and sentences" autocomplete="off" disabled>
+        </div>
+        
+        <!-- Button to submit or return to previous page -->
+        <div class="submit-container">
+            <button onclick="window.location.href='modules.html';" class="submit-button">Submit</button> <!-- Button to navigate back or submit responses -->
+        </div>
+    </main>
+
+    <script src="combinations.js"></script> <!-- Link to external JavaScript file for functionality -->
+</body>
+</html>

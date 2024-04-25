@@ -1,0 +1,94 @@
+<!DOCTYPE html> <!-- Declaration for HTML5 document type -->
+<html lang="en"> <!-- HTML document starts with language set to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Character set defined as UTF-8 for international compatibility -->
+    <title>Grade Overview</title> <!-- Title of the web page -->
+    <link rel="stylesheet" href="styles6.css"> <!-- Link to external CSS file for styling the page -->
+</head>
+<body>
+    <header class="header">
+        <h1>Test Scores</h1> <!-- Header content displaying the main title -->
+        <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Favicon for the website -->
+    </header>
+
+    <main class="main-content">
+        <div id="score-container">
+            <h2>Individual Test Scores:</h2> <!-- Section title for individual test scores -->
+            <div id="individualScores"> <!-- Container for displaying individual test scores -->
+                <!-- Scores will be dynamically inserted via JavaScript -->
+                <p id="readingAloudTestScore">Reading Aloud Test Score: -- / 24.0</p>
+                <p id="combinationsTestScore">Combinations Test Score: -- / 25.5</p>
+                <p id="shortStoryTestBScore">Short Story Test B Score: -- / 10.0</p>
+                <p id="telephoneTestScore">Telephone Test Score: -- / 11.0</p>
+                <p id="mapIndexTestScore">Map Index Test Score: -- / 10.0</p>
+            </div>
+            <h2>Cumulative Score:</h2> <!-- Section title for the cumulative score -->
+            <p id="cumulativeScore">Cumulative Score: -- / --</p> <!-- Placeholder for cumulative score -->
+        </div>
+        <p>You have now completed the online portion of the test. Now wait for the proctor to bring the taskbox and setup the manipulative skills test.</p> <!-- Instructions for the next steps in the testing process -->
+        <div class="submit-buttons-container">
+            <button onclick="resetTestAndReturnHome();" class="submit-button">Return Home</button> <!-- Button to reset the test and return to the home page -->
+        </div>
+    </main>
+
+    <script src="grading.js"></script> <!-- Link to external JavaScript file for grading logic -->
+    <script>
+        // Script runs after the document content has fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const moduleButtons = document.querySelectorAll('.module-button:not(.Grade-test)'); // Selects all module buttons except the grade test button
+            let lastCompletedModule = parseInt(sessionStorage.getItem('lastCompletedModule') || '0'); // Retrieves the last completed module index from session storage
+            updateModuleButtons(lastCompletedModule); // Update UI based on the last completed module
+
+            // Add event listeners to module buttons
+            moduleButtons.forEach((button, index) => {
+                button.addEventListener('click', function(event) {
+                    if (button.classList.contains('locked')) { // Prevent action if the module is locked
+                        event.preventDefault();
+                        return false;
+                    } else {
+                        markModuleAsCompleted(index); // Mark the module as completed on click
+                    }
+                });
+            });
+
+            // Function to mark a module as completed
+            function markModuleAsCompleted(index) {
+                sessionStorage.setItem('lastCompletedModule', String(index + 1)); // Save the new last completed module index to session storage
+                updateModuleButtons(index + 1); // Update the module buttons to reflect the change
+            }
+
+            // Function to update the appearance and state of module buttons
+            function updateModuleButtons(lastCompletedModule) {
+                moduleButtons.forEach((button, index) => {
+                    if (index <= lastCompletedModule) { // Unlock and possibly mark completed
+                        button.classList.remove('locked');
+                        button.disabled = false;
+                        if (index < lastCompletedModule) {
+                            button.classList.add('completed');
+                        }
+                    } else { // Lock and disable any modules not yet reached
+                        button.classList.add('locked');
+                        button.disabled = true;
+                    }
+                });
+
+                // Handle display of the grading test container based on module completion
+                const gradeTestContainer = document.querySelector('.Grade-test-container');
+                if (lastCompletedModule >= moduleButtons.length) {
+                    gradeTestContainer.style.display = 'block';
+                    gradeTestContainer.querySelector('.Grade-test').classList.add('completed');
+                } else {
+                    gradeTestContainer.style.display = 'none';
+                }
+            }
+        });
+
+        // Function to reset test progress and return to the home page
+        function resetTestAndReturnHome() {
+            sessionStorage.clear(); // Clear all items in session storage
+            window.location.href = 'Main.html'; // Redirect to the main home page
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- HTML5 document type declaration -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Map Index Test</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles8.css"> <!-- External CSS file for styling the webpage -->
+    <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Favicon for the website -->
+</head>
+<body>
+    <header class="header">
+        <span class="header-title">Map Index Test</span> <!-- Header section with the title of the test -->
+    </header>
+
+    <main class="main-content">
+        <audio id="audioPlayer" src="Perfex part 5.mp3"></audio> <!-- Audio player element for test instructions or content -->
+        <button class="audio-button" onclick="document.getElementById('audioPlayer').play()">Play Map Index Audio</button> <!-- Button to play the audio content -->
+
+        <div class="notes-section">
+            <textarea id="Notes" class="notes-textarea" placeholder="Make note of the streets below; you are permitted to have multiple tabs open..."></textarea> <!-- Textarea for users to make notes during the test -->
+        </div>
+
+        <div class="map-images">
+            <img id="mapImage" class="map-image" src="map_photos/map_title.jpg"> <!-- Image of the map for reference during the test -->
+            <div>
+                <button class="map-button" onclick="changeImage('map_photos/map_title.jpg')">Page 1</button> <!-- Buttons to change the displayed map image -->
+                <button class="map-button" onclick="changeImage('map_photos/map_1.jpg')">Page 2</button>
+                <button class="map-button" onclick="changeImage('map_photos/map_3.jpg')">Page 3</button>
+                <button class="map-button" onclick="changeImage('map_photos/map_4.jpg')">Page 4</button>
+            </div>
+        </div>
+
+        <form id="streetForm">
+            <div class="question">
+                <label for="street-1">Street Code 1:</label>
+                <input type="text" id="street-1" class="answer-input">
+                <button type="button" id="street-1-button" class="enter-button">Enter</button> <!-- Questions and fields for entering answers related to the map -->
+            </div>
+            <div class="question">
+                <label for="street-2">Street Code 2:</label>
+                <input type="text" id="street-2" class="answer-input">
+                <button type="button" id="street-2-button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="street-3">Street Code 3:</label>
+                <input type="text" id="street-3" class="answer-input">
+                <button type="button" id="street-3-button" class="enter-button">Enter</button>
+            </div>
+            <div class="question">
+                <label for="street-4">Street Code 4:</label>
+                <input type="text" id="street-4" class="answer-input">
+                <button type="button" id="street-4-button" class="enter-button">Enter</button>
+            </div>
+        </form>
+        
+        <div class="submit-container">
+            <button class="submit-button" id="mapTestSubmitButton">Submit</button> <!-- Button to submit the answers -->
+        </div>
+    </main>
+    
+    <script>
+        function changeImage(fileName) {
+            document.getElementById("mapImage").src = fileName; // Function to change the map image
+        }
+
+        function lockField(inputId, buttonId) {
+            document.getElementById(inputId).disabled = true; // Disables the input field
+            document.getElementById(buttonId).disabled = true; // Disables the button
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const answers = ["18A1", "16B2", "21C3", "44D4"]; // Preset answers for validation
+            let score = 0;
+
+            function checkAnswer(inputId, answer) {
+                const userInput = document.getElementById(inputId).value.trim().toUpperCase(); // Fetches and formats the user input
+                if (userInput === answer.toUpperCase()) {
+                    score += 2.5; // Increases the score for a correct answer
+                }
+                lockField(inputId, inputId + '-button'); // Locks the input field after submission
+            }
+
+            document.getElementById('mapTestSubmitButton').addEventListener('click', function() {
+                answers.forEach((answer, index) => {
+                    checkAnswer('street-' + (index + 1), answer); // Checks each answer when submit button is clicked
+                });
+
+                localStorage.setItem('mapTestScore', score.toFixed(1)); // Stores the score in localStorage
+                localStorage.setItem('mapTestComplete', 'true'); // Marks the test as complete in localStorage
+
+                window.location.href = 'modules.html'; // Redirects to another page
+            });
+
+            document.querySelectorAll('.enter-button').forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    const inputId = event.target.previousElementSibling.id; // Fetches the ID of the associated input field
+                    lockField(inputId, event.target.id); // Locks the field when the enter button is clicked
+                });
+            });
+        });
+    </script>
+</body>
+</html>

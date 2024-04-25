@@ -1,0 +1,92 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #004a99;
+    color: #fff;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.header {
+    background-color: #002856;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-content {
+    background-color: #0056b3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: auto;
+    max-width: 600px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.module-button {
+    background-color: rgb(235, 171, 52);
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Smaller padding for a smaller button */
+    font-size: 16px; /* Adjusted font size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px 0; /* Smaller margin */
+    width: auto; /* Auto width based on content */
+}
+
+.module-button:hover {
+    background-color: #fcd703;
+    transform: translateY(-2px);
+}
+
+.notes-container, .submit-buttons-container {
+    width: 100%; /* Full width to contain children */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align children */
+}
+
+#notes {
+    width: 80%; /* Match the width of the buttons */
+    height: 150px; /* Fixed height for the textarea */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    resize: none; /* Disable resizing */
+    background-color: #fff;
+    color: #000;
+}
+
+footer#footer {
+    background: #002856;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+/* Add any additional styles or responsive adjustments as needed */

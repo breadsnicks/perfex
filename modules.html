@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- Declaration for HTML5 document type -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+  <title>Perfex Test</title> <!-- Title of the webpage -->
+  <link rel="stylesheet" href="styles2.css"> <!-- External CSS file for styling the webpage -->
+  <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Favicon for the website -->
+</head>
+<body>
+  <header class="header">
+    <span class="header-title">The Perfex Test</span> <!-- Displaying the title of the test -->
+    <div id="timerDisplay">30:00</div> <!-- Timer display initialized at 30 minutes -->
+    <button onclick="location.href='Main.html'" class="header-button">Return Home</button> <!-- Button to return to the home page -->
+  </header>
+
+  <main class="main-content">
+    <div class="module-container">
+      <h2 class="module-title">Test Modules:</h2> <!-- Title for the section of test modules -->
+      <button onclick="location.href='short_story_test_a.html'" class="module-button">Part 1A: Short Story Test</button> <!-- Button to start Part 1A of the test -->
+      <button onclick="location.href='reading-aloud-test.html'" class="module-button">Part 2: Reading Aloud Test</button> <!-- Button to start Part 2 of the test -->
+      <button onclick="location.href='combinations.html'" class="module-button">Part 3: Copying information Test</button> <!-- Button to start Part 3 of the test -->
+      <button onclick="location.href='telephone_test.html'" class="module-button">Part 4: Telephone call Test</button> <!-- Button to start Part 4 of the test -->
+      <button onclick="location.href='short_story_test_b.html'" class="module-button">Part 1B: Short Story Test</button> <!-- Button to start Part 1B of the test -->
+      <button onclick="location.href='map-index-test.html'" class="module-button">Part 5: Map Index Test</button> <!-- Button to start Part 5 of the test -->
+      
+      <div class="Grade-test-container">
+        <button onclick="location.href='grade.html'" class="grade-button Grade-test">End Test</button> <!-- Button to end the test and proceed to grading -->
+      </div>
+    </div>
+  </main>
+
+  <script src="modulesScript.js"></script> <!-- External JavaScript file for additional functionality -->
+</body>
+</html>

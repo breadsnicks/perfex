@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- HTML5 document type declaration -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Short Story Test A</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles5.css"> <!-- External CSS file linked for styling the webpage -->
+    <link rel="shortcut icon" type="x-icon" href="TPD_seal.png"> <!-- Favicon for the website -->
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Short Story Test A</h1> <!-- Main header displayed as the title of the test -->
+    </header>
+
+    <main class="main-content">
+        <button id="playAudio" class="module-button" onclick="playOnce()">Play Short Story</button> <!-- Button to start playing the short story audio file -->
+        
+        <textarea id="notes" rows="10" cols="50" placeholder="Take notes here..."></textarea> <!-- Textarea for participants to take notes during the audio playback -->
+        
+        <audio id="storyAudio" src="Short-Story.mp3"></audio> <!-- Audio element sourcing the short story audio file -->
+        
+        <!-- Submit Buttons Container -->
+        <div class="submit-buttons-container">
+            <button id="submitNotes" class="module-button">Submit Notes</button> <!-- Button to submit the notes taken during the test -->
+            <button onclick="window.location.href='modules.html';" class="module-button">Submit</button> <!-- Button to proceed to the next module or page after submitting -->
+        </div>
+    </main>
+
+    <script src="test_a.js"></script> <!-- External JavaScript file linked for handling interactive functionalities like playing the audio and submitting notes -->
+</body>
+</html>

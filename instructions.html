@@ -1,0 +1,99 @@
+<!DOCTYPE html> <!-- Declaration for HTML5 document type -->
+<html>
+<head>
+    <title>PERFEX INSTRUCTIONS</title> <!-- Page title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect for faster font loading from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- CORS policy compliance for fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> <!-- Poppins font inclusion -->
+    <link rel="stylesheet" href="styles9.css"> <!-- External CSS stylesheet link -->
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">INSTRUCTIONS</h1> <!-- Header with page title -->
+    </header>
+    <div class="introduction-paragraph">
+        <strong>Abstract:</strong> <!-- Section title -->
+        <br>
+        Communication services are pivotal towards reliable emergency response services. With a daily rate of approximately 3,250 urgent calls a day within the Toronto Police Department, 911 operators are expected to diligently extract caller information and guide dispatching services. However, since calls are frequently presented under unfamiliar and intensive conditions, it is important to hire operators that are proficient in multi-tasking, auditory perception, and stress management.
+        <br> <br>
+        To select suitable candidates for communication services, the Toronto Police Department has relied on “Perfex”: a multi-tasking device that uses various modules to examine one’s resilience, speed, accuracy, and attention to detail under stressful conditions. The department acknowledges that Perfex’s development in the 1970s hinders its ability to reflect a modern workplace and its technology. 
+        <br> <br>
+        Smith Engineering students were tasked to design a modernized version of Perfex. This iteration, designed by Aaron Kleiman, Andrew Heraldo, Julien Chagnon, Jack Marcinow, and Evan Prosserman, consists of an automated grading system, web-based interface, typing module, and an arduino-based taskbox.
+        <br> <br>
+        The following text will provide detailed instructions for the modules that candidates will be assessed on. If further assistance is required, please feel free to inquire a proctor.
+        <br> <br>
+    </div>
+
+    <div class="starting-instructions">
+        <strong>Before You Start..</strong> <!-- Section title -->
+        <br>
+        Please Ensure that the following has been provided to you: <br> <!-- List of requirements before starting the test -->
+        - Scrap paper and a writing utensil<br>
+        - A configured microphone and keyboard<br>
+        - A working audio interface<br> <br>
+        Please be aware that a 30 minute timer will be commenced once "start test" has been pressed, modules must be completed in the sequence that is provided.
+        <strong>You will not be able to return to a module once it is completed. Proceed with care.</strong> <br> <br>
+    </div>
+
+    <div class="first-module">
+        <strong>MODULE 1: Short Story Test A | Note Taking Only</strong> <br> <!-- Module 1 instructions -->
+        Click on "Play Short Story" to listen to a short story. Pay attention to all provided details; you will be allowed to type notes in the white box provided. 
+        Alternatively, you can record notes on scrap paper. When the audio is completed, you will be required to submit your notes and move onto the next module. You will
+        be allowed to refer to your notes for Short Story Test B. <br> <br>
+    </div>
+
+    <div class="second-module">
+        <strong>MODULE 2: Reading Aloud Test | 24 POINTS</strong> <br> <!-- Module 2 instructions -->
+        In this test, you will be required to reiterate what has been written in the text box provided to you.
+        Click on "Start Recording", speak in the microphone, and click on the "Stop Recording" button to stop. You will be able to visualize
+        your words in the white box below. Proceed to the next module by clicking on the 'select button'.
+        <br>
+        <strong>Please record carefully; you will not have a second chance to record.</strong>
+        <br><br>
+    </div>
+
+    <div class="third-module">
+        <strong>MODULE 3: Copying Information Test | 25.5 POINTS</strong> <br> <!-- Module 3 instructions -->
+        Start the module by clicking on the "Play Letter Word Combinations" buttons. 8-10 combinations will be relayed to you.
+        When the audio plays, record each individual phrase in the text box, clicking on your keyboard's enter key before moving onto the next combination.
+        If you happen to miss a combination, do not fret. You will not lose marks for moving onto the next phrase. Move onto the "Phrases and Sentences" section by clicking on its corresponding button. Note that this section follows a similar format.
+        <br> <br>
+    </div>
+
+    <div class="fourth-module">
+        <strong>MODULE 4: Telephone Call Test | 11 POINTS</strong> <br> <!-- Module 4 instructions -->
+        Click on the "Play Phone Call" button to hear direct instructions. A ringtone will eventually play. Respond by clicking on the "pick up phone button".
+        Listen to the phone call, note take, and gather specified information accordingly. Submit your answers on the labels provided below.
+        <strong>After pressing the "Enter" button, you will be locked out from changing your answer.</strong> <br> <br>
+    </div>
+
+    <div class="fifth-module">
+        <strong>MODULE 5: Short Story Test B | 10 POINTS</strong> <br> <!-- Module 5 instructions -->
+        Your notes from MODULE 1 will be available for this module. Please refer to them as you type into each corresponding answer boxes.
+        Lock in your answers by selecting their "Enter" buttons. <br> <br>
+    </div>
+
+    <div class="sixth-module">
+        <strong>MODULE 6: Map Index Test | 10 POINTS</strong> <br> <!-- Module 6 instructions -->
+        In this module, you will be required to relay the map indices of 5 street addresses. Click on the "Play Audio" button to start the module.
+        Record those addresses on the provided note box. You will be required to navigate through a virtual map index by clicking on the provided page buttons.
+        Finish the module by recording all map indices in the boxes below.
+        <br> <br>
+    </div>
+
+    <div class="seventh-module">
+        <strong>MODULE 7: TaskBox Test | 20.5 POINTS</strong> <br> <!-- Module 7 instructions -->
+        In this module, you will be expected to perform a series of tasks within a small amount of time.
+        Expect your proctor to connect the Arduino Taskbox to your laptop device. Each mini-module should be self-explanatory, you must simply follow the provided instructions diligently.
+        <strong>Please be aware that you will be assessed on your ability to act swiftly and diligently</strong>
+        <br> <br>
+        <button id="return-home" class="module-button">Return Home</button> <!-- Button to return to the home page -->
+    </div>
+
+    <script>
+        document.getElementById('return-home').addEventListener('click', function() {
+            window.location.href = 'Main.html'; // Redirect to the main home page when the button is clicked
+        });
+    </script>
+</body>
+</html>

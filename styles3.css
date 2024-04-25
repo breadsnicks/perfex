@@ -1,0 +1,98 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #004a99; /* Main dark blue background */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #002856; /* Darker blue for the header */
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-content {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reading-section {
+    background-color: #0073e6; /* Lighter blue for the reading section */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.reading-section p {
+    color: white; /* White text for readability */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.module-button, .return-button {
+    background-color: #ebab34; /* Yellow for the buttons */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 20px 10px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.module-button:hover, .return-button:hover {
+    background-color: #e6af05; /* Darker yellow on hover */
+    transform: translateY(-3px);
+}
+
+.button-container, .transcript-container, .submit-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.transcript {
+    background-color: #fff; /* White background for transcript area */
+    color: #333; /* Dark text for transcript */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 50px; /* Give some minimum height if empty */
+}
+
+/* Style for the submit button at the end to match the other buttons */
+.submit-button {
+    background-color: #ebab34; /* Yellow buttons */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e6af05; /* Darker yellow on hover */
+    transform: translateY(-3px);
+}
